@@ -61,8 +61,9 @@ app.post('/generate', async (req, res) => {
         <h2>Subjudul</h2>
         <p>Paragraf</p>
         <p>Paragraf</p>
-        <li>Isi Topik</li>
-        <li>Isi Topik</li>
+        <h2>Subjudul</h2>
+        <li>Paragraf</li>
+        <li>Paragraf</li>
         <h2>Subjudul</h2>
         <p>Paragraf</p>
         <p>Paragraf</p>
