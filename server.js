@@ -48,10 +48,8 @@ app.post('/generate', async (req, res) => {
         Buat teks mudah dipahami dan dibaca. Pastikan ada minimal 10 bagian.
         Setiap bagian harus memiliki minimal dua paragraf.
         Cantumkan kata kunci berikut yang telah dioptimalkan: ${trimmedKeyword}.
-        Tulis dalam Bahasa Indonesia.
-
-        Output:
-        
+        Tulis dalam Bahasa Indonesia dan jangan gunakan Markdown seperti # ## ###.
+        Output:        
         <h1>Judul Utama</h1>
         <p>Paragraf</p>
         <p>Paragraf</p>
