@@ -42,13 +42,13 @@ app.post('/generate', async (req, res) => {
 
         // Prompt yang lebih optimal untuk OpenAI
         const prompt = `
+        Tulis dalam Bahasa Indonesia dan jangan gunakan Markdown seperti tanda ini (# ## ###).
         Buatlah postingan blog dengan menggunakan Tag HTML yang telah dioptimalkan untuk SEO sekitar ${trimmedKeyword}.
         Tulislah dengan gaya SEO. Gunakan kata transisi. Gunakan kalimat aktif. Tulis lebih dari 1000 kata.
         Gunakan judul yang sangat kreatif untuk postingan blog. Tambahkan judul untuk setiap bagian.
         Buat teks mudah dipahami dan dibaca. Pastikan ada minimal 10 bagian.
         Setiap bagian harus memiliki minimal dua paragraf.
         Cantumkan kata kunci berikut yang telah dioptimalkan: ${trimmedKeyword}.
-        Tulis dalam Bahasa Indonesia dan jangan gunakan Markdown seperti # ## ###.
         Output:        
         <h1>Judul Utama</h1>
         <p>Paragraf</p>
@@ -71,12 +71,11 @@ app.post('/generate', async (req, res) => {
         <h2>Kesimpulan</h2>
         <p>Kesimpulan</p>
         `;
-
         console.log(`[${new Date().toISOString()}] ✅ Mengirim prompt ke OpenAI...`);
 
         // Panggil OpenAI API
         const response = await openai.chat.completions.create({
-            model: "gpt-4o",
+            model: "gpt-4o-mini",
             messages: [{ role: "user", content: prompt }],
             max_tokens: 3000,
             temperature: 0.9
