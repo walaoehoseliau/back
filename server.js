@@ -43,6 +43,29 @@ app.post('/generate', async (req, res) => {
         // Prompt yang lebih optimal untuk OpenAI
         const prompt = `
         Create a blog post that has been optimized for SEO about ${trimmedKeyword}. Write it in a SEO tone. Use transition words. Use active voice. Write over 1000 words. Use very creative titles for the blog post. Add a title for each section. Make the text easy to understand and read. Ensure there are a minimum of 10 sections. Each section should have a minimum of two paragraphs. Include the following keywords that have been optimized: ${trimmedKeyword}. Write In Indonesia Language.
+
+        Output:
+        <h1>Judul Utama</h1>
+        <p>Paragraf.</p>
+        <p>Paragraf.</p>
+        <h2>Subjudul</h2>
+        <p>Paragraf.</p>
+        <p>Paragraf.</p>
+        <h2>Subjudul</h2>
+        <p>Paragraf.</p>
+        <p>Paragraf.</p>
+        <li>Isi Topik.</li>
+        <li>Isi Topik.</li>
+        <h2>Subjudul</h2>
+        <p>Paragraf.</p>
+        <p>Paragraf.</p>
+        <h3>Subjudul</h3>
+        <li>Judul Artikel Terkait 1.</li>
+        <li>Judul Artikel Terkait 2.</li>
+        <h3>Kesimpulan</h3>
+        <p>Kesimpulan awal.</p>
+        <p>Kesimpulan akhir.</p>
+
         `;
 
         console.log(`[${new Date().toISOString()}] ✅ Mengirim prompt ke OpenAI...`);
