@@ -78,7 +78,7 @@ app.post('/generate', async (req, res) => {
             model: "gpt-4o-mini",
             messages: [{ role: "user", content: prompt }],
             max_tokens: 3000,
-            temperature: 0.9
+            temperature: 1.2
         });
 
         // Pastikan response memiliki konten
