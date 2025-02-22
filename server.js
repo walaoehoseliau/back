@@ -77,8 +77,11 @@ app.post('/generate', async (req, res) => {
         const response = await openai.chat.completions.create({
             model: "gpt-4o-mini",
             messages: [{ role: "user", content: prompt }],
-            max_tokens: 3000,
-            temperature: 1.2
+            temperature: 2,
+            max_completion_tokens: 12231,
+            top_p: 0,
+            frequency_penalty: 0,
+            presence_penalty: 0
         });
 
         // Pastikan response memiliki konten
