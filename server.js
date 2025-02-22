@@ -28,12 +28,12 @@ app.post('/generate', async (req, res) => {
         const prompt = `
         Buatlah Artikel SEO menggunakan Tag HTML yang telah dioptimalkan tentang  ${trimmedKeyword}.
         Tulislah dengan nada Informatif. Gunakan kata transisi, kalimat aktif dan unik. Tulis lebih dari 1500 kata.
-        Pikirkan Terlebih dahulu sebelum memberikan judul dari topik trending artikel ini dan kreatif contoh. Tambahkan judul untuk setiap bagian.
-        Buat teks mudah dipahami dan dibaca. Pastikan ada minimal 10 bagian.
+        Pikirkan Terlebih dahulu sebelum memberikan judul dari topik trending artikel ini dan kreatif contoh: Petir Kemenangan! 5 Pola Strategis Buka Pintu Cuan Selangit di Game Online${Keyword}, Teknik Jurus Maut ${Keyword} Rahasia Maxwin Terbaru Dari Admin [Nama Acak], Wow! Intip 7 Langkah Sakti Bawa Cuan Besar di Game Online ${Keyword} Jackpot Tanpa Henti. Tambahkan judul untuk setiap bagian.
+        Buat teks mudah dipahami dan dibaca. Pastikan ada minimal 8 bagian.
         Setiap bagian harus memiliki minimal dua paragraf.
         Cantumkan kata kunci berikut yang telah dioptimalkan SEO ${trimmedKeyword}.
         Tulis dalam Bahasa Indonesia.
-        
+
         Output:
         
         <h1>Judul Utama</h1>
