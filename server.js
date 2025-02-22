@@ -26,9 +26,9 @@ app.post('/generate', async (req, res) => {
         }
         console.log(`[${new Date().toISOString()}] Keyword diterima: ${trimmedKeyword}`);
         const prompt = `
-        Buatlah postingan blog dengan menggunakan Tag HTML yang telah dioptimalkan untuk SEO sekitar ${trimmedKeyword}.
-        Tulislah dengan gaya SEO. Gunakan kata transisi. Gunakan kalimat aktif. Tulis lebih dari 2000 kata.
-        Gunakan judul yang sangat kreatif untuk postingan blog. Tambahkan judul untuk setiap bagian.
+        Buatlah Artikel SEO menggunakan Tag HTML yang telah dioptimalkan tentang  ${trimmedKeyword}.
+        Tulislah dengan nada Informatif. Gunakan kata transisi, kalimat aktif dan unik. Tulis lebih dari 1500 kata.
+        Pikirkan Terlebih dahulu sebelum memberikan judul dari topik trending artikel ini dan kreatif contoh. Tambahkan judul untuk setiap bagian.
         Buat teks mudah dipahami dan dibaca. Pastikan ada minimal 10 bagian.
         Setiap bagian harus memiliki minimal dua paragraf.
         Cantumkan kata kunci berikut yang telah dioptimalkan SEO ${trimmedKeyword}.
@@ -81,11 +81,11 @@ app.post('/generate', async (req, res) => {
         const response = await openai.chat.completions.create({
             model: "gpt-4o-mini",
             messages: [{ role: "user", content: prompt }],
-            temperature: 0.8,
-            max_completion_tokens: 10000,
-            top_p: 0.8,
-            frequency_penalty: 1.5,
-            presence_penalty: 1.5
+            temperature: 1.2,
+            max_completion_tokens: 5000,
+            top_p: 0.5,
+            frequency_penalty: 1,
+            presence_penalty: 1
         });
         if (!response.choices || !response.choices[0] || !response.choices[0].message.content) {
             throw new Error("OpenAI API tidak mengembalikan hasil yang valid.");
