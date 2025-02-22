@@ -10,7 +10,7 @@ app.use(cors({
 }));
 const apiKey = process.env.OPENAI_API_KEY;
 if (!apiKey) {
-    console.error("❌ ERROR: OPENAI_API_KEY tidak ditemukan di .env!");
+    console.error("ERROR: OPENAI_API_KEY tidak ditemukan di .env!");
     process.exit(1);
 }
 const openai = new OpenAI({ apiKey });
@@ -18,11 +18,11 @@ app.post('/generate', async (req, res) => {
     try {
         const { keyword } = req.body;
         if (!keyword || typeof keyword !== "string") {
-            return res.status(400).json({ error: "❌ Keyword harus berupa teks!" });
+            return res.status(400).json({ error: "Keyword harus berupa teks!" });
         }
         const trimmedKeyword = keyword.trim();
         if (trimmedKeyword.length > 100) {
-            return res.status(400).json({ error: "❌ Keyword terlalu panjang! Maksimal 100 karakter." });
+            return res.status(400).json({ error: "Keyword terlalu panjang! Maksimal 100 karakter." });
         }
         console.log(`[${new Date().toISOString()}] Keyword diterima: ${trimmedKeyword}`);
         const prompt = `
@@ -33,26 +33,46 @@ app.post('/generate', async (req, res) => {
         Setiap bagian harus memiliki minimal dua paragraf.
         Cantumkan kata kunci berikut yang telah dioptimalkan SEO ${trimmedKeyword}.
         Tulis dalam Bahasa Indonesia.
-        Output:        
+        
+        Output:
+        
         <h1>Judul Utama</h1>
         <p>Paragraf</p>
         <p>Paragraf</p>
+        
         <h2>Subjudul</h2>
         <p>Paragraf</p>
         <p>Paragraf</p>
+        
         <h2>Subjudul</h2>
         <p>Paragraf</p>
         <p>Paragraf</p>
+        
         <h2>Subjudul</h2>
+        <ul>
         <li>Paragraf</li>
         <li>Paragraf</li>
+        <li>Paragraf</li>
+        <li>Paragraf</li>
+        </ul>
+        
         <h2>Subjudul</h2>
         <p>Paragraf</p>
         <p>Paragraf</p>
-        <h3>Subjudul</h3>
+        
+        <h2>Subjudul</h2>
+        <ul>
         <li>Paragraf</li>
         <li>Paragraf</li>
+        <li>Paragraf</li>
+        </ul>
+
+        <h2>Subjudul</h2>
+        <p>Paragraf</p>
+        <p>Paragraf</p>
+        
         <h2>Kesimpulan</h2>
+        <p>Kesimpulan</p>
         <p>Kesimpulan</p>
         `;
         console.log(`[${new Date().toISOString()}] Mengirim prompt ke OpenAI...`);
@@ -73,7 +93,7 @@ app.post('/generate', async (req, res) => {
         console.log(`[${new Date().toISOString()}] Artikel berhasil dibuat, panjang karakter: ${htmlArticle.length}`);
         res.json({ text: htmlArticle });
     } catch (error) {
-        console.error(`[${new Date().toISOString()}] ❌ Error OpenAI API:`, error.response ? error.response.data : error.message);
+        console.error(`[${new Date().toISOString()}] Error OpenAI API:`, error.response ? error.response.data : error.message);
         let errorMessage = "Terjadi kesalahan saat membuat artikel.";
         if (error.response && error.response.status === 429) {
             errorMessage = "Terlalu banyak permintaan ke OpenAI API. Silakan coba lagi nanti.";
