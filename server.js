@@ -26,56 +26,91 @@ app.post('/generate', async (req, res) => {
         }
         console.log(`[${new Date().toISOString()}] Keyword diterima: ${trimmedKeyword}`);
         const prompt = `
-        Buatlah Artikel SEO menggunakan Tag HTML yang telah dioptimalkan tentang  ${trimmedKeyword}.
-        Tulislah dengan nada Informatif. Gunakan kata transisi, kalimat aktif dan unik. Tulis lebih dari 1500 kata.
-        Pikirkan Terlebih dahulu sebelum memberikan judul dari topik trending artikel ini dan kreatif contoh: Petir Kemenangan! 5 Pola Strategis Buka Pintu Cuan Selangit di Game Online [trimmedKeyword], Teknik Jurus Maut trimmedKeyword Rahasia Maxwin Terbaru Dari Admin [Nama Acak], Wow! Intip 7 Langkah Sakti Bawa Cuan Besar di Game Online [trimmedKeyword] Jackpot Tanpa Henti. Tambahkan judul untuk setiap bagian.
-        Buat teks mudah dipahami dan dibaca. Pastikan ada minimal 8 bagian.
-        Setiap bagian harus memiliki minimal dua paragraf.
-        Cantumkan kata kunci berikut yang telah dioptimalkan SEO ${trimmedKeyword}.
-        Tulis dalam Bahasa Indonesia.
-
-        Output:
+            Buatlah postingan blog dengan menggunakan Tag HTML yang telah dioptimalkan untuk SEO ${trimmedKeyword}.
+            Tulislah dengan gaya SEO. Gunakan kata transisi. Gunakan kalimat aktif. Tulis lebih dari 2000 kata.
+            Gunakan judul yang sangat kreatif dan unik untuk postingan blog.
+            contoh judul:
+            
+            Judul Clickbait & Menarik Perhatian
+            "Rahasia [Topik] yang Belum Banyak Diketahui, Wajib Coba!"
+            "Inilah 7 Fakta Mengejutkan tentang [Topik] yang Jarang Diketahui!"
+            "Banyak yang Salah! Ini Cara yang Benar untuk [Topik]"
+            "STOP Melakukan Ini Jika Ingin [Manfaat dari Topik]!"
+            
+            Judul Berbasis Angka
+            "10 Cara Efektif untuk [Topik] yang Terbukti Berhasil"
+            "5 Kesalahan Umum dalam [Topik] dan Cara Menghindarinya"
+            "7 Tips Terbaik untuk [Topik] Agar Hasilnya Maksimal"
+            "15 Rekomendasi [Produk/Strategi] untuk [Topik] yang Harus Dicoba"
+            
+            Judul Berbasis Panduan & Cara
+            "Panduan Lengkap untuk [Topik] dari Pemula hingga Mahir"
+            "Bagaimana Cara [Topik] dalam 5 Langkah Mudah"
+            "Langkah Demi Langkah: Cara [Topik] yang Paling Efektif"
+            "Tutorial [Topik] yang Mudah Dipahami, Cocok untuk Pemula!"
+            
+            Judul Berbasis Perbandingan
+            "Mana yang Lebih Baik? [Opsi A] vs [Opsi B] dalam [Topik]"
+            "Kelebihan & Kekurangan [Topik]: Harus Dicoba atau Tidak?"
+            "Kenapa [Produk/Metode A] Lebih Baik daripada [Produk/Metode B]?"
+            "Perbandingan Lengkap: [Topik A] vs [Topik B], Mana yang Lebih Worth It?"
+            
+            Judul yang Menggunakan Sensasi atau FOMO (Fear of Missing Out)
+            "Wajib Tahu! Tren [Topik] yang Sedang Viral di 2024!"
+            "Jangan Sampai Ketinggalan! [Topik] yang Bisa Mengubah Hidupmu"
+            "Rahasia Sukses dalam [Topik] yang Hanya Diketahui Segelintir Orang"
+            "Hanya Sedikit Orang yang Tahu! Ini Trik [Topik] yang Jarang Diungkap"
+            
+            Judul Berbasis Studi Kasus atau Pengalaman Pribadi
+            "Saya Mencoba [Topik] Selama 30 Hari, Ini Hasilnya!"
+            "Dari Nol hingga Sukses: Kisah Nyata tentang [Topik]"
+            "Bagaimana [Orang Sukses] Berhasil dalam [Topik]? Ini Rahasianya!"
+            "Pelajaran Berharga dari Pengalaman Gagal dalam [Topik]"
+            
+            Buat teks mudah dipahami dan dibaca. Pastikan minimal 8 bagian. Setiap bagian harus memiliki minimal dua paragraf.
+            Tulis dalam Bahasa Indonesia.       	
+            Output:
         
-        <h1>Judul Utama</h1>
-        <p>Paragraf</p>
-        <p>Paragraf</p>
-        
-        <h2>Subjudul</h2>
-        <p>Paragraf</p>
-        <p>Paragraf</p>
-        
-        <h2>Subjudul</h2>
-        <p>Paragraf</p>
-        <p>Paragraf</p>
-        
-        <h2>Subjudul</h2>
-        <p>Paragraf</p>
-        <ul>
-        <li>Paragraf</li>
-        <li>Paragraf</li>
-        <li>Paragraf</li>
-        <li>Paragraf</li>
-        </ul>
-        
-        <h2>Subjudul</h2>
-        <p>Paragraf</p>
-        <p>Paragraf</p>
-        
-        <h2>Subjudul</h2>
-        <p>Paragraf</p>
-        <ul>
-        <li>Paragraf</li>
-        <li>Paragraf</li>
-        <li>Paragraf</li>
-        </ul>
-
-        <h2>Subjudul</h2>
-        <p>Paragraf</p>
-        <p>Paragraf</p>
-        
-        <h2>Kesimpulan</h2>
-        <p>Kesimpulan</p>
-        <p>Kesimpulan</p>
+            <h1>Judul Utama</h1>
+            <p>Paragraf</p>
+            <p>Paragraf</p>
+            
+            <h2>Subjudul</h2>
+            <p>Paragraf</p>
+            <p>Paragraf</p>
+            
+            <h2>Subjudul</h2>
+            <p>Paragraf</p>
+            <p>Paragraf</p>
+            
+            <h2>Subjudul</h2>
+            <p>Paragraf</p>
+            <ul>
+            <li>Paragraf</li>
+            <li>Paragraf</li>
+            <li>Paragraf</li>
+            <li>Paragraf</li>
+            </ul>
+            
+            <h2>Subjudul</h2>
+            <p>Paragraf</p>
+            <p>Paragraf</p>
+            
+            <h2>Subjudul</h2>
+            <p>Paragraf</p>
+            <ul>
+            <li>Paragraf</li>
+            <li>Paragraf</li>
+            <li>Paragraf</li>
+            </ul>
+    
+            <h2>Subjudul</h2>
+            <p>Paragraf</p>
+            <p>Paragraf</p>
+            
+            <h2>Kesimpulan</h2>
+            <p>Kesimpulan</p>
+            <p>Kesimpulan</p>
         `;
         console.log(`[${new Date().toISOString()}] Mengirim prompt ke OpenAI...`);
         const response = await openai.chat.completions.create({
