@@ -24,11 +24,12 @@ app.post('/generate', async (req, res) => {
         if (trimmedKeyword.length > 100) {
             return res.status(400).json({ error: "Keyword terlalu panjang! Maksimal 100 karakter." });
         }
-        console.log(`[${new Date().toISOString()}] Keyword diterima: ${trimmedKeyword}`);
+        console.log(`[${new Date().toISOString()}] Keyword diterima: ${Keyword}`);
         const prompt = `
-            Buatlah postingan blog dengan menggunakan Tag HTML yang telah dioptimalkan untuk SEO ${trimmedKeyword}.
+            Buatlah postingan blog dengan menggunakan Tag HTML yang telah dioptimalkan untuk SEO ${keyword}.
             Tulislah dengan gaya SEO. Gunakan kata transisi. Gunakan kalimat aktif. Tulis lebih dari 2000 kata.
             Gunakan judul yang sangat kreatif dan unik untuk postingan blog.
+            Buat teks mudah dipahami dan dibaca. Pastikan minimal 8 bagian. Setiap bagian harus memiliki minimal dua paragraf.
             contoh judul:
             
             Judul Clickbait & Menarik Perhatian
@@ -67,9 +68,8 @@ app.post('/generate', async (req, res) => {
             "Bagaimana [Orang Sukses] Berhasil dalam [Topik]? Ini Rahasianya!"
             "Pelajaran Berharga dari Pengalaman Gagal dalam [Topik]"
             
-            Buat teks mudah dipahami dan dibaca. Pastikan minimal 8 bagian. Setiap bagian harus memiliki minimal dua paragraf.
             Tulis dalam Bahasa Indonesia.       	
-            Output:
+            OUTPUT:
         
             <h1>Judul Utama</h1>
             <p>Paragraf</p>
