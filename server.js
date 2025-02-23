@@ -116,11 +116,11 @@ app.post('/generate', async (req, res) => {
         const response = await openai.chat.completions.create({
             model: "gpt-4o-mini",
             messages: [{ role: "user", content: prompt }],
-            temperature: 1.2,
-            max_completion_tokens: 5000,
-            top_p: 0.5,
-            frequency_penalty: 1,
-            presence_penalty: 1
+            temperature: 0.8,
+            max_completion_tokens: 3000,
+            top_p: 1,
+            frequency_penalty: 0,
+            presence_penalty: 0
         });
         if (!response.choices || !response.choices[0] || !response.choices[0].message.content) {
             throw new Error("OpenAI API tidak mengembalikan hasil yang valid.");
