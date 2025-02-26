@@ -25,92 +25,26 @@ app.post('/generate', async (req, res) => {
             return res.status(400).json({ error: "Keyword terlalu panjang! Maksimal 100 karakter." });
         }
         console.log(`[${new Date().toISOString()}] Keyword diterima: ${Keyword}`);
-        const prompt = `
-            Buatlah postingan blog dengan menggunakan Tag HTML yang telah dioptimalkan untuk SEO ${keyword}.
-            Tulislah dengan gaya SEO. Gunakan kata transisi. Gunakan kalimat aktif. Tulis lebih dari 2000 kata.
-            Gunakan judul yang sangat kreatif dan unik untuk postingan blog.
-            Buat teks mudah dipahami dan dibaca. Pastikan minimal 8 bagian. Setiap bagian harus memiliki minimal dua paragraf.
-            contoh judul:
-            
-            Judul Clickbait & Menarik Perhatian
-            "Rahasia [Topik] yang Belum Banyak Diketahui, Wajib Coba!"
-            "Inilah 7 Fakta Mengejutkan tentang [Topik] yang Jarang Diketahui!"
-            "Banyak yang Salah! Ini Cara yang Benar untuk [Topik]"
-            "STOP Melakukan Ini Jika Ingin [Manfaat dari Topik]!"
-            
-            Judul Berbasis Angka
-            "10 Cara Efektif untuk [Topik] yang Terbukti Berhasil"
-            "5 Kesalahan Umum dalam [Topik] dan Cara Menghindarinya"
-            "7 Tips Terbaik untuk [Topik] Agar Hasilnya Maksimal"
-            "15 Rekomendasi [Produk/Strategi] untuk [Topik] yang Harus Dicoba"
-            
-            Judul Berbasis Panduan & Cara
-            "Panduan Lengkap untuk [Topik] dari Pemula hingga Mahir"
-            "Bagaimana Cara [Topik] dalam 5 Langkah Mudah"
-            "Langkah Demi Langkah: Cara [Topik] yang Paling Efektif"
-            "Tutorial [Topik] yang Mudah Dipahami, Cocok untuk Pemula!"
-            
-            Judul Berbasis Perbandingan
-            "Mana yang Lebih Baik? [Opsi A] vs [Opsi B] dalam [Topik]"
-            "Kelebihan & Kekurangan [Topik]: Harus Dicoba atau Tidak?"
-            "Kenapa [Produk/Metode A] Lebih Baik daripada [Produk/Metode B]?"
-            "Perbandingan Lengkap: [Topik A] vs [Topik B], Mana yang Lebih Worth It?"
-            
-            Judul yang Menggunakan Sensasi atau FOMO (Fear of Missing Out)
-            "Wajib Tahu! Tren [Topik] yang Sedang Viral di 2024!"
-            "Jangan Sampai Ketinggalan! [Topik] yang Bisa Mengubah Hidupmu"
-            "Rahasia Sukses dalam [Topik] yang Hanya Diketahui Segelintir Orang"
-            "Hanya Sedikit Orang yang Tahu! Ini Trik [Topik] yang Jarang Diungkap"
-            
-            Judul Berbasis Studi Kasus atau Pengalaman Pribadi
-            "Saya Mencoba [Topik] Selama 30 Hari, Ini Hasilnya!"
-            "Dari Nol hingga Sukses: Kisah Nyata tentang [Topik]"
-            "Bagaimana [Orang Sukses] Berhasil dalam [Topik]? Ini Rahasianya!"
-            "Pelajaran Berharga dari Pengalaman Gagal dalam [Topik]"
-            
-            Tulis dalam Bahasa Indonesia.       	
-            OUTPUT:
-        
-            <h1>Judul Utama</h1>
-            <p>Paragraf</p>
-            <p>Paragraf</p>
-            
-            <h2>Subjudul</h2>
-            <p>Paragraf</p>
-            <p>Paragraf</p>
-            
-            <h2>Subjudul</h2>
-            <p>Paragraf</p>
-            <p>Paragraf</p>
-            
-            <h2>Subjudul</h2>
-            <p>Paragraf</p>
-            <ul>
-            <li>Paragraf</li>
-            <li>Paragraf</li>
-            <li>Paragraf</li>
-            <li>Paragraf</li>
-            </ul>
-            
-            <h2>Subjudul</h2>
-            <p>Paragraf</p>
-            <p>Paragraf</p>
-            
-            <h2>Subjudul</h2>
-            <p>Paragraf</p>
-            <ul>
-            <li>Paragraf</li>
-            <li>Paragraf</li>
-            <li>Paragraf</li>
-            </ul>
-    
-            <h2>Subjudul</h2>
-            <p>Paragraf</p>
-            <p>Paragraf</p>
-            
-            <h2>Kesimpulan</h2>
-            <p>Kesimpulan</p>
-            <p>Kesimpulan</p>
+        const prompt = `Tulis artikel SEO sepanjang 2000 kata tentang ${Keyword} dengan gaya SEO. Artikel harus memiliki judul menarik (klikbait). Artikel harus informatif, engaging, dan untuk menarik lebih banyak pembaca.
+                        OUTPUT:
+                        <h1>Judul</h1>
+                        <p>Paragraf.</p>
+                        <h2>Judul</h2>
+                        <p>Paragraf.</p>
+                        <h2>Judul</h2>
+                        <p>Paragraf.</p>
+                        <h2>Judul</h2>
+                        <p>Paragraf.</p>
+                        <h2>Judul</h2>
+                        <p>Paragraf.</p>
+                        <h2>Judul</h2>
+                        <p>Paragraf.</p>
+                        <h2>Judul</h2>
+                        <p>Paragraf.</p>
+                        <h2>Judul</h2>
+                        <p>Paragraf.</p>
+                        <h2>Kesimpulan</h2>
+                        <p>Paragraf.</p>
         `;
         console.log(`[${new Date().toISOString()}] Mengirim prompt ke OpenAI...`);
         const response = await openai.chat.completions.create({
