@@ -28,10 +28,9 @@ app.post('/generate', async (req, res) => {
         const prompt = 
                 `Tulis artikel SEO sepanjang 2000 kata tentang ${trimmedKeyword} dengan gaya SEO.
                 Artikel harus memiliki judul menarik Clickbait. 
-                Artikel harus informatif, engaging, dan untuk menarik lebih banyak pembaca Indonesia. 
-                Ubah kata Slot menjadi Game.
-                
-                OUTPUT:
+                Artikel harus informatif, engaging, dan untuk menarik lebih banyak pembaca Indonesia.
+                Ubah kata Slot menjadi Game!!!
+                    OUTPUT:
                         <h1>Judul</h1>
                         <p>Paragraf</p>
                         <h2>Judul</h2>
@@ -64,7 +63,6 @@ app.post('/generate', async (req, res) => {
                         <p>Paragraf</p>
                         <h2>Judul</h2>
                         <p>Paragraf</p>`;
-        
         console.log(`[${new Date().toISOString()}] Mengirim prompt ke OpenAI...`);
         const response = await openai.chat.completions.create({
             model: "o1-mini",
