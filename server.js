@@ -26,10 +26,9 @@
                 }
                 console.log(`[${new Date().toISOString()}] Keyword diterima: ${trimmedKeyword}`);
                 const prompt = 
-                `Tulis artikel SEO sepanjang 2000 kata tentang ${trimmedKeyword} dengan gaya SEO. Artikel harus memiliki judul Clickbait yang menarik. Artikel harus informatif, engaging, dan untuk menarik lebih banyak pembaca Indonesia. Ubah kata Slot menjadi Game.
-                    
-                    OUTPUT:
-                    
+                `Tulis artikel SEO sepanjang 2000 kata tentang ${trimmedKeyword} dengan Informartif. Buat Judul Clickbait yang memberikan judul sebuah konten terlihat sangat menarik. Artikel harus informatif, engaging dan unik agar lebih banyak pengunjung serta gunakan Bahasa Indonesia.
+                   Ubah kata Slot menjadi Game.
+                            OUTPUT:
                         <h1>Judul</h1>
                         <p>Paragraf</p>
                         <h2>Judul</h2>
