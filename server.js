@@ -24,8 +24,8 @@ app.post('/generate', async (req, res) => {
         if (trimmedKeyword.length > 100) {
             return res.status(400).json({ error: "Keyword terlalu panjang! Maksimal 100 karakter." });
         }
-        console.log(`[${new Date().toISOString()}] Keyword diterima: ${Keyword}`);
-        const prompt = `Tulis artikel SEO sepanjang 2000 kata tentang ${Keyword}' dengan gaya SEO. Artikel harus memiliki judul menarik Clickbait. Artikel harus informatif, engaging, dan untuk menarik lebih banyak pembaca.
+        console.log(`[${new Date().toISOString()}] Keyword diterima: ${trimmedKeyword}`);
+        const prompt = `Tulis artikel SEO sepanjang 2000 kata tentang ${trimmedKeyword}' dengan gaya SEO. Artikel harus memiliki judul menarik Clickbait. Artikel harus informatif, engaging, dan untuk menarik lebih banyak pembaca.
                         OUTPUT:
                         <h1>Judul</h1>
                         <p>Paragraf</p>
