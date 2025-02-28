@@ -25,36 +25,45 @@ app.post('/generate', async (req, res) => {
             return res.status(400).json({ error: "Keyword terlalu panjang! Maksimal 100 karakter." });
         }
         console.log(`[${new Date().toISOString()}] Keyword diterima: ${Keyword}`);
-        const prompt = `Tulis artikel SEO sepanjang 2000 kata tentang ${Keyword} dengan gaya SEO. Artikel harus memiliki judul menarik (klikbait). Artikel harus informatif, engaging, dan untuk menarik lebih banyak pembaca.
+        const prompt = `Tulis artikel SEO sepanjang 2000 kata tentang ${Keyword}' dengan gaya SEO. Artikel harus memiliki judul menarik Clickbait. Artikel harus informatif, engaging, dan untuk menarik lebih banyak pembaca.
                         OUTPUT:
                         <h1>Judul</h1>
-                        <p>Paragraf.</p>
+                        <p>Paragraf</p>
                         <h2>Judul</h2>
-                        <p>Paragraf.</p>
+                        <p>Paragraf</p>
                         <h2>Judul</h2>
-                        <p>Paragraf.</p>
+                        <p>Paragraf</p>
                         <h2>Judul</h2>
-                        <p>Paragraf.</p>
+                        <p>Paragraf</p>
                         <h2>Judul</h2>
-                        <p>Paragraf.</p>
+                        <p>Paragraf</p>
                         <h2>Judul</h2>
-                        <p>Paragraf.</p>
+                        <p>Paragraf</p>
                         <h2>Judul</h2>
-                        <p>Paragraf.</p>
+                        <p>Paragraf</p>
                         <h2>Judul</h2>
-                        <p>Paragraf.</p>
-                        <h2>Kesimpulan</h2>
-                        <p>Paragraf.</p>
-        `;
+                        <p>Paragraf</p>
+                        <h2>Judul</h2>
+                        <p>Paragraf</p>
+                        <h2>Judul</h2>
+                        <p>Paragraf</p>
+                        <h2>Judul</h2>
+                        <p>Paragraf</p>
+                        <h2>Judul</h2>
+                        <p>Paragraf</p>
+                        <h2>Judul</h2>
+                        <p>Paragraf</p>
+                        <h2>Judul</h2>
+                        <p>Paragraf</p>
+                        <h2>Judul</h2>
+                        <p>Paragraf</p>
+                        <h2>Judul</h2>
+                        <p>Paragraf</p>`;
+        
         console.log(`[${new Date().toISOString()}] Mengirim prompt ke OpenAI...`);
         const response = await openai.chat.completions.create({
-            model: "gpt-4o-mini",
+            model: "o1-mini",
             messages: [{ role: "user", content: prompt }],
-            temperature: 0.80,
-            max_completion_tokens: 3456,
-            top_p: 0,
-            frequency_penalty: 0,
-            presence_penalty: 0
         });
         if (!response.choices || !response.choices[0] || !response.choices[0].message.content) {
             throw new Error("OpenAI API tidak mengembalikan hasil yang valid.");
