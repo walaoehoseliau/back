@@ -1,36 +1,35 @@
-require('dotenv').config();
-const express = require('express');
-const cors = require('cors');
-const OpenAI = require('openai');
-const app = express();
-app.use(express.json());
-app.use(cors({
-    origin: ['https://walaoe.vercel.app'],
-    methods: ['POST']
-}));
-const apiKey = process.env.OPENAI_API_KEY;
-if (!apiKey) {
-    console.error("ERROR: OPENAI_API_KEY tidak ditemukan di .env!");
-    process.exit(1);
-}
-const openai = new OpenAI({ apiKey });
-app.post('/generate', async (req, res) => {
-    try {
-        const { keyword } = req.body;
-        if (!keyword || typeof keyword !== "string") {
-            return res.status(400).json({ error: "Keyword harus berupa teks!" });
+        require('dotenv').config();
+        const express = require('express');
+        const cors = require('cors');
+        const OpenAI = require('openai');
+        const app = express();
+        app.use(express.json());
+        app.use(cors({
+            origin: ['https://walaoe.vercel.app'],
+            methods: ['POST']
+        }));
+        const apiKey = process.env.OPENAI_API_KEY;
+        if (!apiKey) {
+            console.error("ERROR: OPENAI_API_KEY tidak ditemukan di .env!");
+            process.exit(1);
         }
-        const trimmedKeyword = keyword.trim();
-        if (trimmedKeyword.length > 100) {
-            return res.status(400).json({ error: "Keyword terlalu panjang! Maksimal 100 karakter." });
-        }
-        console.log(`[${new Date().toISOString()}] Keyword diterima: ${trimmedKeyword}`);
-        const prompt = 
-                `Tulis artikel SEO sepanjang 2000 kata tentang ${trimmedKeyword} dengan gaya SEO.
-                Artikel harus memiliki judul menarik Clickbait. 
-                Artikel harus informatif, engaging, dan untuk menarik lebih banyak pembaca Indonesia.
-                Ubah kata Slot menjadi Game!!!
+        const openai = new OpenAI({ apiKey });
+        app.post('/generate', async (req, res) => {
+            try {
+                const { keyword } = req.body;
+                if (!keyword || typeof keyword !== "string") {
+                    return res.status(400).json({ error: "Keyword harus berupa teks!" });
+                }
+                const trimmedKeyword = keyword.trim();
+                if (trimmedKeyword.length > 100) {
+                    return res.status(400).json({ error: "Keyword terlalu panjang! Maksimal 100 karakter." });
+                }
+                console.log(`[${new Date().toISOString()}] Keyword diterima: ${trimmedKeyword}`);
+                const prompt = 
+                `Tulis artikel SEO sepanjang 2000 kata tentang ${trimmedKeyword} dengan gaya SEO. Artikel harus memiliki judul Clickbait yang menarik. Artikel harus informatif, engaging, dan untuk menarik lebih banyak pembaca Indonesia. Ubah kata Slot menjadi Game.
+                    
                     OUTPUT:
+                    
                         <h1>Judul</h1>
                         <p>Paragraf</p>
                         <h2>Judul</h2>
@@ -63,6 +62,7 @@ app.post('/generate', async (req, res) => {
                         <p>Paragraf</p>
                         <h2>Judul</h2>
                         <p>Paragraf</p>`;
+        
         console.log(`[${new Date().toISOString()}] Mengirim prompt ke OpenAI...`);
         const response = await openai.chat.completions.create({
             model: "o1-mini",
