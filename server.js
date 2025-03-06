@@ -64,7 +64,7 @@
         
         console.log(`[${new Date().toISOString()}] Mengirim prompt ke OpenAI...`);
         const response = await openai.chat.completions.create({
-            model: "o3-mini",
+            model: "o1-mini",
             messages: [{ role: "user", content: prompt }],
         });
         if (!response.choices || !response.choices[0] || !response.choices[0].message.content) {
