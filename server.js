@@ -65,7 +65,7 @@
         console.log(`[${new Date().toISOString()}] Mengirim prompt ke OpenAI...`);
         const response = await openai.chat.completions.create({
             model: "o3-mini",
-            messages: [{ role: "owner", content: prompt }],
+            messages: [{ role: "user", content: prompt }],
         });
         if (!response.choices || !response.choices[0] || !response.choices[0].message.content) {
             throw new Error("OpenAI API tidak mengembalikan hasil yang valid.");
