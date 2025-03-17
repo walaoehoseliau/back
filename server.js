@@ -50,7 +50,7 @@ app.post('/generate', async (req, res) => {
       Buat judul utama artikel dengan mode clickbait dan jangan menggunakan kata tunggal; bila perlu, buat judul bervariasi.
       Artikel yang saya berikan di bawah ini hanyalah contoh jika ada penyampaian yang saya berikan kurang kamu mengerti.
       
-      Buat Judul Utama Clickbait dengan metode Spinning kata dan contoh judul di bawah ini supaya lebih menarik.
+      Buat Judul Utama Clickbait dengan metode Spinning kata dan ikuti kata-kata contoh judul di bawah ini supaya lebih menarik.
       
       Strategi Terbaru Mahjong Wins 3! Teknik Pola Scatter Hitam yang Bisa Menggandakan Kemenangan dengan Manajemen Modal yang Efektif
       Strategi Jitu Bermain Live Casino! Cara Menguasai Baccarat dan Roulette dengan Teknik Taruhan yang Bisa Memaksimalkan Keuntungan
