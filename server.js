@@ -50,41 +50,48 @@ app.post('/generate', async (req, res) => {
       Buat judul utama artikel dengan mode clickbait dan jangan menggunakan kata tunggal; bila perlu, buat judul bervariasi.
       Artikel yang saya berikan di bawah ini hanyalah contoh jika ada penyampaian yang saya berikan kurang kamu mengerti.
       
-      Contoh Judul Utama Harus Clickbait
+      Buat Judul Utama Clickbait dengan metode Spinning kata dan contoh judul di bawah ini supaya lebih menarik.
       
-      Dari Modal Receh ke Kaya Raya! Pemain Bisa Bongkar Strategi Lucky Neko yang Bantu Ubah Hidup Dari Pertalite ke Pertamax
-      
+      Strategi Terbaru Mahjong Wins 3! Teknik Pola Scatter Hitam yang Bisa Menggandakan Kemenangan dengan Manajemen Modal yang Efektif
       Strategi Jitu Bermain Live Casino! Cara Menguasai Baccarat dan Roulette dengan Teknik Taruhan yang Bisa Memaksimalkan Keuntungan
-      
-      Strategi Terbaru Mahjong Wins 3! Teknik Pola Scatter Hitam yang Bisa Menggandakan Kemenangan dengan Manajemen Modal yang Efektif
-      
+      Dari Modal Receh ke Kaya Raya! Pemain Bisa Bongkar Strategi Lucky Neko yang Bantu Ubah Hidup Dari Pertalite ke Pertamax
+      Dari Modal Receh ke Kaya Raya! Pemain Bisa Bongkar Strategi Lucky Neko yang Bantu Ubah Hidup Dari Pertalite ke Pertamax
       Gak Perlu Duit Turun Segunung! Inilah Teknik Taruhan Awal yang Dipakai Bang Topan untuk Menembus Perkalian Monster di Wild Bandito Terbukti Ampuh Berkat Panduan Admin Sekkia
-      
       Strategi Terbaru Mahjong Wins 3! Teknik Pola Scatter Hitam yang Bisa Menggandakan Kemenangan Kamu Hanya Dengan Modal Receh Auto Jadi Jutawan
-      
       Cara Hilangkan Pusing Jadi Saldo Rekening! Hanya 5 Langkah Mudah Raih Kemenangan Maksimal 250 Juta di Fortune Tiger PG Soft
-      
       Teknik Bermain Jitu yang Wajib untuk Kamu Terapkan Pada Saat Bermain Mahjong Ways Dengan Menggunakan Fasilitas Disini
-      
       Dikit Dikit Jadi Bukit Lama Kelamaan Jadi Naga! Ayo Buruan Gabung di Game Mahjong Ghacor Rasakan Sensasi Menang Maksimal
-      
       Si Buta Gua Hantu Turun Gunung Kembali Menangkan Jackpot Fantastis Menggunakan 5 Pola Menang Maksimal Ekstrim Jepe 222 Juta di Mahjong Wins 3 Pragmatic dengan Perkalian x550!
-      
       Tak Perlu Duit Segunung! Teknik Taruhan Awal yang Dipakai Bang Topan untuk Menembus Perkalian Monster di Wild Bandito Terbukti Ampuh Berkat Panduan Admin Nenthau
-      
       Strategi Terbaru Mahjong Wins 3! Teknik Pola Scatter Hitam yang Bisa Menggandakan Kemenangan dengan Manajemen Modal yang Efektif
-      
       Pola Mahjong Wins 3 Hari Ini Kembali Viral Hari ini Dijamin Langsung Profit Hingga Kantong Jadi Sempit
-      
-      Kisah Sukses Banyak Pemain Yang Dapat Scatter Hitam Mahjong Wins Dan Raih Cuan Besar Tanpa Strategi Khusus Dari Sifu Pragmatic Play
-    `;
+      Contoh Judul gunakan kata-kata Clikbait dan unik berikut contohnya judul yang diinginkan:
+      Bagaimana Hujan Maxwin Hingga Rp500 Juta Menerjang di Mahjong Ways? Kang Asep Ungkap Pola Gacor yang Selalu Berhasil. Simak Caranya!
+      Menurut Pengamat Geologi Rian Arifin! Orang sukses Bermain Olympus Xmas 1000 Biasa Mempunyai Kebiasaan Mengulangi Buy Spin Sebanyak 5X
+      Raih Sensasi Kemenangan Luar Biasa di Princess 1000 Strategi Jitu untuk Meraih Keuntungan 711 Juta
+      Apa yang Membuat 5 Shio Ini Berhasil Meraih Kekayaan di Mahjong Ways 2? Kesabaran atau Keberuntungan?
+      Ingin Tahun 2025 Penuh Kebahagiaan? Temukan 6 Shio Hoki yang Dapat Membawa Kemakmuran di Mahjong Ways 3!
+      Jalan Ninja Sukses Mudah! Kisah Inspiratif Kang Asep Tinggalkan Game Lama dan Wujudkan Kekayaan Instan dalam Sehari Lewat Mahjong Ways
+      Penghasilan Tak Terduga! Tangis Bahagia Master Topan, Impiannya Wujud Berkat Mahjong Ways. Kini Sukses Jalankan Usaha Besar yang di Idamkan
+      Pemanggil Scatter Jepe Modal Kecil Mahjong Ways 2 Menggila di Setiap Putaran
+      Rahasia Jackpot di Mahjong Wins3 Settingan Bet Pemicu Black Scatter!
+      Rahasia Menang Banyak di Scatter Mahjong Ways! Yuk Coba Trik Anti Boncos Terbaik!
+      Mungkinkah Zeus di Gates of Olympus Suka Kaget?Master Topan Klaim Hasilkan Rp500 Juta dari Petir Maxwin di Jam Gacor, Katanya Putu Sampai Malu Kena Spin Receh
+      Pengaruh Permainan pada Pemilihan Jam Gacor yang Benar untuk Mendapatkan Maxwin dengan Cepat dan Mudah yang Dipadukan dengan RTP Live yang Akurat
+      Benarkah Modal Receh Bisa Jadi Rp400 Juta? Kisah Kuli Bangunan Raih Maxwin Berkat RTP Live dan Pola Gacor Mahjong Wins3, Ini Rahasianya
+      Terbaru! Simpelnya Taktik Gacor Mahjong Ways 3 Memudahkan Munculnya Jackpot Tiada Henti Khusus Hari Ini! Informasi Gacor
+      Turunnya Scatter dengan Sambarang Petir Maut Gates of Olympus Pola Gacor Bang Danru Semakin Mudah Maxwin dengan Cepat dari Hasil RTP LIVE yang Akurat
+      Main Mahjong Ways Scatter Hitam di Bet 1000 dengan RTP Live Akurat dan Tempo Spin yang Benar Dijamin 100% Dapatkan Maxwin Spektakuler
+      Bocoran RTP Game Gacor Malam Ini Di Provider Pragmatic Play Bisa Ciptakan Cuan Besarmu
+      Inovasi Baru dalam Mahjong Ways Kombinasi Tempo Spin dan RTP LIVE untuk Kemenangan Besar 
+      Dewa Keberuntungan Dikemas Maxwin Total Sweet Bonanza Xmas Paling Tinggi Live RTP dalam  Dipenghujung Tahun 2025
+      Selpot Kini Merubah Cara Main Mahjong Ways Dengan Menggunakan Pola Popot Dan Jam Gacor Hanya 12 Kali Spin Auto Sultan!
+      Kisah Sukses Banyak Pemain Yang Dapat Scatter Hitam Mahjong Wins Dan Raih Cuan Besar Tanpa Strategi Khusus Dari Sifu Pragmatic Play`;
 
     console.log(`[${new Date().toISOString()}] Mengirim prompt ke OpenAI...`);
     const response = await openai.chat.completions.create({
     model: 'o3-mini',
-      messages: 
-        [{ role: 'user',
-            content: prompt }]
+      messages: [{ role: 'user', content: prompt }]
     });
 
     if (!response.choices || !response.choices[0] || !response.choices[0].message.content) {
