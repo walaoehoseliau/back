@@ -35,22 +35,8 @@ app.post('/generate', async (req, res) => {
     console.log(`[${new Date().toISOString()}] Keyword diterima: ${Trimeyword}`);
 
     
-   const prompt = ` Tuliskan Artikel yang Di Optimasi SEO, Berbagai macam kata-kata unik dan menarik minimal 1000 kata ${Trimeyword}.
-                    Artikel harus informatif dan mudah dipahami. Gunakan bahasa Indonesia yang baik dan sopan.
-                    Struktur artikel SEO memiliki beragam jenis gaya penulisan sehingga artikel yang dihasilkan berkualitas tinggi.
-                    Beberapa isi dalam artikel yaitu judul utama, subjudul, listicle, paragraf, dan berikan hasil terbaik versi kamu.
-                    Gunakan <h1> untuk judul utama,
-                    Gunakan <h2> untuk subjudul yang relevan,
-                    Gunakan <p> untuk isi paragraf.
-                    Gunakan <ol> untuk listicle.
-                    Gunakan <ul> untuk bagian terpenting dalam makna.
-                    Pastikan ada minimal 8 judul sampai 10 subjudul.
-                    Berikan informasi yang mendalam dan menarik.
-                    Ubah kata slot menjadi game, permainan.
-                    Buat judul utama artikel dengan mode clickbait dan jangan menggunakan kata tunggal; bila perlu, buat judul bervariasi.
-                    Artikel yang saya berikan di bawah ini hanyalah contoh jika ada penyampaian yang saya berikan kurang kamu mengerti.
-      
-                    Buat Judul Utama Clickbait dengan metode Spinning kata dan ikuti kata-kata contoh judul di bawah ini supaya lebih menarik.
+   const prompt = ` Tuliskan Artikel yang Di Optimasi SEO, Berbagai macam kata-kata unik dan menarik minimal 1000 kata ${Trimeyword}. Artikel harus informatif dan mudah dipahami. Gunakan bahasa Indonesia yang baik dan sopan. Struktur artikel SEO memiliki beragam jenis gaya penulisan sehingga artikel yang dihasilkan berkualitas tinggi. Beberapa isi dalam artikel yaitu judul utama, subjudul, listicle, paragraf, dan berikan hasil terbaik versi kamu. Gunakan <h1> untuk judul utama, Gunakan <h2> untuk subjudul yang relevan, Gunakan <p> untuk isi paragraf. Gunakan <ol> untuk listicle. Gunakan <ul> untuk bagian terpenting dalam makna. Pastikan ada minimal 8 judul sampai 10 subjudul. Berikan informasi yang mendalam dan menarik. Ubah kata slot menjadi game, permainan. Buat judul utama artikel dengan mode clickbait dan jangan menggunakan kata tunggal; bila perlu, buat judul bervariasi. Artikel yang saya berikan di bawah ini hanyalah contoh jika ada penyampaian yang saya berikan kurang kamu mengerti.
+                    Buat Judul Utama Artikel SpinClickbait di bawah dengan metode Spinning dan ikuti kata-kata contoh judul di bawah ini supaya lebih menarik.
       
                     Strategi Terbaru Mahjong Wins 3! Teknik Pola Scatter Hitam yang Bisa Menggandakan Kemenangan dengan Manajemen Modal yang Efektif
                     Strategi Jitu Bermain Live Casino! Cara Menguasai Baccarat dan Roulette dengan Teknik Taruhan yang Bisa Memaksimalkan Keuntungan
