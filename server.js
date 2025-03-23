@@ -28,14 +28,14 @@ app.post('/generate', async (req, res) => {
     }
 
     const Keyword = keyword.trim();
-    if (Keyword.length > 100) {
-      return res.status(400).json({ error: "Keyword terlalu panjang! Maksimal 100 karakter." });
+    if (Trimeyword.length > 100) {
+      return res.status(400).json({ error: "Keyword terlalu panjang! Maksimal 200 karakter." });
     }
 
-    console.log(`[${new Date().toISOString()}] Keyword diterima: ${Keyword}`);
+    console.log(`[${new Date().toISOString()}] Keyword diterima: ${Trimeyword}`);
 
     
-   const prompt = ` Tuliskan Artikel yang Di Optimasi SEO, Berbagai macam kata-kata unik dan menarik minimal 1000 kata ${Keyword}.
+   const prompt = ` Tuliskan Artikel yang Di Optimasi SEO, Berbagai macam kata-kata unik dan menarik minimal 1000 kata ${Trimeyword}.
                     Artikel harus informatif dan mudah dipahami. Gunakan bahasa Indonesia yang baik dan sopan.
                     Struktur artikel SEO memiliki beragam jenis gaya penulisan sehingga artikel yang dihasilkan berkualitas tinggi.
                     Beberapa isi dalam artikel yaitu judul utama, subjudul, listicle, paragraf, dan berikan hasil terbaik versi kamu.
